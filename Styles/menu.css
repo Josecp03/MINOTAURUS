@@ -1,7 +1,15 @@
 /* ESTILOS PARA EL MENÚ */
+@font-face {
+    font-family: 'Lego';
+    src: url(../Fonts/RoladeItalic-Black.ttf);
+}
+
 .inicio {
     width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Imagen de inicio */
@@ -13,3 +21,9 @@
     background-repeat: no-repeat;
     background-position: center;
 }
+
+.play-game {
+    position: absolute;
+    font-family: 'Lego';
+}
+
