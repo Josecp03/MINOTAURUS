@@ -3,6 +3,13 @@
     font-family: 'Lego';
     src: url(../Fonts/RoladeItalic-Black.ttf);
 }
+:root {
+    --boton-naranja-claro: #F2B705;
+    --boton-naranja-medio: #d88d02;
+    --boton-naranja-oscuro: #F27405;
+    --boton-marron-anaranjado: #732002;
+    --boton-marron-oscuro: #260101;
+}
 
 .inicio {
     width: 100%;
@@ -22,8 +29,54 @@
     background-position: center;
 }
 
+/* Botón jugar */
 .play-game {
+    width: 230px;
+    height: 80px;
+    background-color: var(--boton-naranja-claro);
+    border-radius: 3px;
+    border: 0px solid var(--boton-naranja-medio);
+    border-bottom-width: 5px;
     position: absolute;
     font-family: 'Lego';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0px 7px 10px #000000;
+    box-sizing: content-box;
+    user-select: none;
 }
-
+.play-game > div {
+    width: 92%;
+    height: 80%;
+    border: 1px solid var(--boton-naranja-medio);
+    border-bottom-width: 3px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 5px;
+}
+.play-game > div > div {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+.play-game > div > div > div {
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    box-shadow: 0px 2px 0px var(--boton-naranja-medio);
+    border: 1px solid var(--boton-naranja-medio);
+}
+.play-game p {
+    position: absolute;
+    font-size: 1.6em;
+    color: #fff;
+    text-shadow: 0px 4px 0px var(--boton-naranja-medio);
+}
+.play-game:active {
+    border-bottom: 0px;
+    transform: translateY(3px);
+}
