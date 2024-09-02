@@ -11,6 +11,7 @@
     --boton-marron-oscuro: #260101;
 }
 
+
 .inicio {
     width: 100%;
     height: 100%;
@@ -79,4 +80,20 @@
 .play-game:active {
     border-bottom: 0px;
     transform: translateY(3px);
+}
+/* Animaciones para los botones */
+.play-game.desaparecer-boton {
+    animation: desaparecerBoton 1s ease forwards;
+}
+@keyframes desaparecerBoton {
+    from {
+        transform: translateY(0px);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    to {
+        transform: translateY(400px);
+        visibility: hidden;
+    }
 }
