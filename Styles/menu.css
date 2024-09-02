@@ -1,0 +1,15 @@
+/* ESTILOS PARA EL MENÚ */
+.inicio {
+    width: 100%;
+    height: 100%;
+}
+
+/* Imagen de inicio */
+.imagen-menu {
+    width: 100%;
+    height: 100%;
+    background-image: url(../Images/COVER04.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
