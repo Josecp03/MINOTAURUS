@@ -1,6 +1,8 @@
 window.addEventListener("DOMContentLoaded", function() {
     const imagenMenu=document.querySelector(".imagen-menu");
     const tituloJuego=document.querySelector(".titulo-minotaurus");
+    const divIntrucciones=document.querySelector(".div-instrucciones");
+    const salir=document.querySelector(".fa-xmark");
 
     // Botones
     const playGame = document.querySelector(".play-game");
@@ -43,5 +45,10 @@ window.addEventListener("DOMContentLoaded", function() {
     
     instrucciones.addEventListener("click", function() {
         reproducirSonido(sonidoPlay);
+        divIntrucciones.classList.add("aparecer-div");
+    });
+
+    salir.addEventListener("click", function() {
+        divIntrucciones.classList.remove("aparecer-div");
     });
 });
