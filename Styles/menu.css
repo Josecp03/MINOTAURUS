@@ -151,3 +151,14 @@
 .instrucciones {
     animation-delay: 300ms !important;
 }
+
+/* TÍTULO */
+.titulo-minotaurus {
+    position: absolute;
+    width: 600px;
+    filter: drop-shadow(0px 0px 10px #000);
+    top: 100px;
+    transform: translateY(-400px);
+    animation: aparecerBoton 0.8s ease forwards 400ms;
+    cursor: pointer;
+}
