@@ -106,7 +106,7 @@
 }
 
 /* Animaciones para los botones */
-.play-game.desaparecer-boton {
+.boton.desaparecer-boton {
     animation: desaparecerBoton 0.8s ease-in-out forwards;
 }
 @keyframes desaparecerBoton {

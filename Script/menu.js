@@ -3,6 +3,7 @@ window.addEventListener("DOMContentLoaded", function() {
 
     // Botones
     const playGame = document.querySelector(".play-game");
+    const instrucciones=document.querySelector(".instrucciones");
     let sonidoPlay = new Audio("../Audio/lego-breaking.mp3"); 
     
     // Sonido de los botones
@@ -21,6 +22,7 @@ window.addEventListener("DOMContentLoaded", function() {
     playGame.addEventListener("click", function () {
         reproducirSonido(sonidoPlay);
         playGame.classList.add("desaparecer-boton");
+        instrucciones.classList.add("desaparecer-boton");
         imagenMenu.classList.add("desaparecer-fondo");
 
         // Reducir el audio lentamente, para hacerlo más fluido
