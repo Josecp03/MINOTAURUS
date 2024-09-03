@@ -209,6 +209,22 @@
     font-size: 3em;
 }
 
-.introduccion p {
+.imagenes-detalladas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     font-family: "MedievalSharp";
 }
+
+.introduccion .imagenes-detalladas img {
+    width: 100px;
+}
+
+img[src*="Tablero"] {
+    grid-row: 1 / 5;
+}
+
+#Tablero {
+    width: 500px;
+}
+
