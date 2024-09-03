@@ -3,6 +3,7 @@
     font-family: 'Lego';
     src: url(../Fonts/RoladeItalic-Black.ttf);
 }
+
 :root {
     --boton-naranja-claro: #F2B705;
     --boton-naranja-medio: #b37400;
@@ -190,7 +191,7 @@
     position: absolute;
     width: 80%;
     height: 80%;
-    background-color: #fff;
+    background-color: var(--boton-naranja-claro);
     border-radius: 15px;
     border: 4px solid sandybrown;
     z-index: 1000;
@@ -206,4 +207,8 @@
     color: #000;
     cursor: pointer;
     font-size: 3em;
+}
+
+.introduccion p {
+    font-family: "MedievalSharp";
 }
