@@ -1,5 +1,6 @@
 window.addEventListener("DOMContentLoaded", function() {
     const imagenMenu=document.querySelector(".imagen-menu");
+    const tituloJuego=document.querySelector(".titulo-minotaurus");
 
     // Botones
     const playGame = document.querySelector(".play-game");
@@ -25,6 +26,8 @@ window.addEventListener("DOMContentLoaded", function() {
         instrucciones.style.transform='translateY(0px)';
         instrucciones.classList.add("desaparecer-boton");
         imagenMenu.classList.add("desaparecer-fondo");
+        tituloJuego.classList.add("desaparecer-titulo");
+
 
         // Reducir el audio lentamente, para hacerlo más fluido
         let reducirAudio=setInterval(() => {
@@ -36,5 +39,9 @@ window.addEventListener("DOMContentLoaded", function() {
                 clearInterval(reducirAudio);
             }
         }, 100);
-    }); 
+    });
+    
+    instrucciones.addEventListener("click", function() {
+        reproducirSonido(sonidoPlay);
+    });
 });

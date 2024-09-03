@@ -5,7 +5,7 @@
 }
 :root {
     --boton-naranja-claro: #F2B705;
-    --boton-naranja-medio: #d88d02;
+    --boton-naranja-medio: #b37400;
     --boton-naranja-oscuro: #F27405;
     --boton-marron-anaranjado: #732002;
     --boton-marron-oscuro: #260101;
@@ -34,10 +34,9 @@
 }
 @keyframes desaparecerFondo {
     from {
-        transform: translateY(0px);
+        opacity: 1;
     }
     to {
-        transform: translateY(-200px);
         opacity: 0;
         visibility: hidden;
     }
@@ -161,4 +160,20 @@
     transform: translateY(-400px);
     animation: aparecerBoton 0.8s ease forwards 400ms;
     cursor: pointer;
+    z-index: 100;
+}
+.titulo-minotaurus.desaparecer-titulo {
+    animation: desaparecerTitulo 1s ease forwards;
+}
+@keyframes desaparecerTitulo {
+    from {
+        transform: translateY(0px);
+    }
+    25% {
+        transform: translateY(15px);
+    }
+    to {
+        transform: translateY(-400px);
+        visibility: hidden;
+    }
 }
