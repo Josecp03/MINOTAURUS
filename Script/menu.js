@@ -22,6 +22,7 @@ window.addEventListener("DOMContentLoaded", function() {
     playGame.addEventListener("click", function () {
         reproducirSonido(sonidoPlay);
         playGame.classList.add("desaparecer-boton");
+        instrucciones.style.transform='translateY(0px)';
         instrucciones.classList.add("desaparecer-boton");
         imagenMenu.classList.add("desaparecer-fondo");
 

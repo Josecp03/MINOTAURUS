@@ -95,6 +95,7 @@
 .boton:active {
     border-bottom: 0px;
     transform: translateY(10px) !important;
+    box-shadow: none;
 }
 
 /* Posición de cada botón */
@@ -103,6 +104,23 @@
 }
 .instrucciones {
     top: 370px;
+}
+
+/* Colores para el botón instrucciones */
+.instrucciones {
+    background-color: var(--boton-naranja-oscuro);
+    border-radius: 3px;
+    border-color: var(--boton-marron-anaranjado);
+}
+.instrucciones > div {
+    border-color: var(--boton-marron-anaranjado);
+}
+.instrucciones > div > div > div {
+    box-shadow: 0px 2px 0px var(--boton-marron-anaranjado);
+    border-color: var(--boton-marron-anaranjado);
+}
+.instrucciones p {
+    text-shadow: 0px 4px 0px var(--boton-marron-anaranjado);
 }
 
 /* Animaciones para los botones */
