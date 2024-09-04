@@ -190,30 +190,50 @@
 .div-instrucciones {
     position: absolute;
     width: 80%;
-    height: 80%;
-    background-color: var(--boton-naranja-claro);
-    border-radius: 15px;
-    border: 4px solid sandybrown;
+    max-width: 750px;
+    height: 0%;
+    background-color:#ede6d6;
     z-index: 1000;
-    scale: 0;
     transition: 0.4s ease;
-    overflow: scroll;
+    font-family: "MedievalSharp";
+    padding: 0px 15px;
+    overflow: hidden;
+    visibility: hidden;
+    text-align: justify;
 }
 .div-instrucciones.aparecer-div {
-    scale: 1;
     transition-duration: 0.7s;
+    height: 80%;
+    border-radius: 3px;
+    border: 2px solid #aca196 ;
+    visibility: visible;
+}
+
+/* Div X */
+.div-instrucciones > div:first-child {
+    padding: 10px 0px;
+    display: flex;
+    justify-content: right;
 }
 .fa-xmark {
-    color: #000;
     cursor: pointer;
-    font-size: 3em;
+    width: 20px;
+    user-select: none;
+}
+
+/* Div Texto */
+.div-instrucciones > div:last-child {
+    margin: 0px 10px;
+}
+.div-instrucciones h2 {
+    margin-bottom: 8px;
 }
 
 .imagenes-detalladas {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    font-family: "MedievalSharp";
+
 }
 
 .introduccion .imagenes-detalladas img {
