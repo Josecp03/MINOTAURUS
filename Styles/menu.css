@@ -196,11 +196,20 @@
     z-index: 1000;
     transition: 0.4s ease;
     font-family: "MedievalSharp";
-    padding: 0px 15px;
-    overflow: hidden;
+    padding: 0px 10px;
+    overflow-y: scroll;
     visibility: hidden;
     text-align: justify;
 }
+.div-instrucciones::-webkit-scrollbar {
+    width: 10px;
+    background-color: #ede6d6;
+    height: 100%;
+}
+.div-instrucciones::-webkit-scrollbar-thumb {
+    background-color: #d8d1c1;
+}
+
 .div-instrucciones.aparecer-div {
     transition-duration: 0.7s;
     height: 80%;
@@ -224,27 +233,24 @@
 /* Div Texto */
 .div-instrucciones > div:last-child {
     margin: 0px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 .div-instrucciones h2 {
     margin-bottom: 8px;
+    text-align: center;
+    font-size: 1.8em;
 }
+
 
 .imagenes-detalladas {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
 }
-
-.introduccion .imagenes-detalladas img {
+.imagenes-detalladas img {
     width: 100px;
 }
-
-img[src*="Tablero"] {
-    grid-row: 1 / 5;
+.imagenes-detalladas div {
+    text-align: center;
 }
-
-#Tablero {
-    width: 500px;
-}
-
