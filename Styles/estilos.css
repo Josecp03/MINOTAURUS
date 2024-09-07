@@ -1,3 +1,4 @@
+/* ESTILOS GENERALES */
 * {
     margin: 0;
     padding: 0;
@@ -6,4 +7,16 @@
 body {
     height: 100vh;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ESTILOS DEL JUEGO */
+.tablero {
+    height: 60%;
+    background-color: #000;
+    position: absolute;
+    aspect-ratio: 1/1;
+    z-index: 0;
 }

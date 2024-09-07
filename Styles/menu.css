@@ -3,7 +3,6 @@
     font-family: 'Lego';
     src: url(../Fonts/RoladeItalic-Black.ttf);
 }
-
 :root {
     --boton-naranja-claro: #F2B705;
     --boton-naranja-medio: #b37400;
@@ -13,14 +12,6 @@
 }
 
 
-.inicio {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 /* IMAGEN DE FONDO */
 .difuminado {
     width: 100%;
@@ -28,6 +19,7 @@
     background-color: #0000001c;
     filter: blur(2px);
     scale: 1.1;
+    z-index: 900;
 }
 .imagen-menu {
     width: 100%;
@@ -36,6 +28,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    z-index: 900;
 }
 .imagen-menu.desaparecer-fondo {
     animation: desaparecerFondo 1s ease-in-out forwards 350ms;
@@ -69,6 +62,7 @@
     user-select: none;
     transform: translateY(-500px);
     animation: aparecerBoton 0.8s ease forwards;
+    z-index: 1000;
 }
 .boton > div {
     width: 92%;
@@ -168,7 +162,7 @@
     transform: translateY(-400px);
     animation: aparecerBoton 0.8s ease forwards 400ms;
     cursor: pointer;
-    z-index: 100;
+    z-index: 1000;
 }
 .titulo-minotaurus.desaparecer-titulo {
     animation: desaparecerTitulo 1s ease forwards;
@@ -243,7 +237,7 @@
     font-size: 1.8em;
 }
 
-
+/* Imágenes de las intrucciones */
 .imagenes-detalladas {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
