@@ -13,14 +13,6 @@
 
 
 /* IMAGEN DE FONDO */
-.difuminado {
-    width: 100%;
-    height: 100%;
-    background-color: #0000001c;
-    filter: blur(2px);
-    scale: 1.1;
-    z-index: 900;
-}
 .imagen-menu {
     width: 100%;
     height: 100%;
@@ -29,6 +21,8 @@
     background-repeat: no-repeat;
     background-position: center;
     z-index: 900;
+    filter: blur(2px);
+    scale: 1.1;
 }
 .imagen-menu.desaparecer-fondo {
     animation: desaparecerFondo 1s ease-in-out forwards 350ms;
