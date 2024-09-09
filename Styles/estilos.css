@@ -15,6 +15,7 @@ body {
     background-position-y: -100px;
 }
 
+
 /* ESTILOS DEL JUEGO */
 .tablero {
     height: 70%;
@@ -39,7 +40,8 @@ body {
     box-shadow: 0px 4px 10px #000000;
 }
 
-/* Dado */
+
+/* ESTILOS DEL DADO */
 .envoltura {
     position: absolute;
     perspective: 600px;
@@ -47,7 +49,7 @@ body {
 }
 .dado {
     position: absolute;
-    transition: 1s ease;
+    transition: 2s ease;
     transform-style: preserve-3d;
     cursor: pointer;
     width: 100px;
@@ -55,9 +57,9 @@ body {
     transform-origin: center;
 }
 .envoltura:hover .dado {
-    transform: rotateY(-160deg) rotateX(-150deg);
+    transform: rotateY(-360deg) rotateX(360DEG);   
 }
-/* Caras del dado */
+/* Caras del dado (Parte negra)*/
 .dado > div {
     width: 100%;
     height: 100%;
@@ -86,6 +88,7 @@ body {
 .derecha {
     transform: translateX(50%) rotateY(90deg);
 }
+/* Parte blanca */
 .dado > div > div {
     height: 85%;
     width: 85%;
@@ -98,17 +101,75 @@ body {
 .abajo > div {
     background-color: green !important;
 }
-.dado > div > div > div {
-    height: 40%;
-    width: 40%;
-    background-color: rgb(197, 0, 0);
+/* Puntos */
+.punto {
+    height: 17px;
+    width: 17px;
+    background-color: rgb(0, 0, 0);
     border-radius: 100%;
 }
-.delante > div {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+.fila {
+    width: 100%;
+    height: 100%;
+    display: flex;
     align-items: center;
+}
+
+/* CARA DE 3 */
+.izquierda > div {
+    display: flex;
     justify-content: center;
-    padding: 10%;
+    align-items: center;
+    flex-direction: column;
+    padding: 11px 15px;
+}
+.izquierda .fila:first-child {
+    display: flex;
+
+}
+.izquierda .fila:nth-child(2) {
+    display: flex;
+    justify-content: center;
+}
+.izquierda .fila:last-child {
+    display: flex;
+    justify-content: right;
+}
+
+/* CARA DE 4 */
+.delante > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 11px 15px;
+}
+.delante .fila {
+    justify-content: space-between;
+}
+
+/* CARA DE 5 */
+.derecha > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 11px 15px;
+}
+.derecha .fila {
+    justify-content: space-between;
+}
+.derecha .fila:nth-child(2) {
+    justify-content: center;
+}
+
+/* CARA DE 6 */
+.detras > div {
+    display: flex;
+    flex-direction: column;
+    padding: 11px 15px;
+    gap: 3px;
+}
+.detras .fila {
+    justify-content: space-between;
 }
