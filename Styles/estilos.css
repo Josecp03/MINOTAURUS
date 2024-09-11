@@ -17,14 +17,14 @@ body {
 
 
 /* ESTILOS DEL JUEGO */
-.tablero {
+#tablero {
     height: 70%;
     transform: translateY(10px);
     background-color: #000;
-    background-image: url(https://www.smartick.es/blog/wp-content/uploads/2023/07/Tablero-de-ajedrez.png);
     background-size: cover;
     position: absolute;
     aspect-ratio: 1/1;
+    background-color: rgba(255, 255, 255, 0.363);
     z-index: 0;
 }
 
