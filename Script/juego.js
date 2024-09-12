@@ -4,17 +4,17 @@ window.addEventListener("DOMContentLoaded", function() {
 
     /**
      *              TURNO
-     *   0   Turno del jugador Rojo
-     *   1   Turno del jugador Azul
+     *   Par     Turno del jugador Rojo
+     *   Impar   Turno del jugador Azul
      * 
      */
-    function turnoJugador() {
-        if(turno == 0) {
+    function turnoJugador(turno) {
+        if(turno%2 == 0) {
             textoTurno.textContent='TURNO DEL JUGADOR ROJO';
-            textoTurno.style.color='rgb(255, 179, 179)';
-        } else if(turno == 1) {
+            textoTurno.style.backgroundColor='rgb(204, 50, 50)';
+        } else if(turno%2 != 0) {
             textoTurno.textContent='TURNO DEL JUGADOR AZUL';
-            textoTurno.style.color='rgb(179, 227, 255)';
+            textoTurno.style.backgroundColor='rgb(39, 141, 201)';
         }
     }
 
@@ -31,7 +31,7 @@ window.addEventListener("DOMContentLoaded", function() {
         [1,0,0,0,0,1,0,1,0,0,0,0,0,1,0,1,0,0,0,0,1],
         [1,0,1,0,2,2,0,2,0,3,3,3,0,2,0,2,2,0,1,0,1],
         [1,0,1,0,0,0,0,0,0,3,3,3,0,0,0,0,0,0,1,0,1],
-        [1,0,2,0,2,2,0,1,0,3,3,3,0,1,0,1,2,0,2,0,1],
+        [1,0,2,0,2,1,0,1,0,3,3,3,0,1,0,1,2,0,2,0,1],
         [1,0,0,0,0,2,0,1,0,0,0,0,0,1,0,2,0,0,0,0,1],
         [1,0,2,1,0,0,0,2,2,2,0,2,2,2,0,0,0,1,2,0,1],
         [1,0,0,1,0,1,0,0,0,0,0,0,0,0,0,1,0,1,0,0,1],
@@ -68,6 +68,23 @@ window.addEventListener("DOMContentLoaded", function() {
     }
 
     // Se define el turno al comenzar y se crea el tablero
-    turnoJugador();
+    turnoJugador(turno);
     crearTablero(tablero);
+
+    const dado=document.querySelector(".dado");
+
+    let movimientosDado=['']
+
+    dado.addEventListener("click", function() {
+        turno++;
+        turnoJugador(turno);
+
+        let random=(Math.round(1+Math.random()*6));
+        console.log(random);
+
+        for (let i=0; i<6; i++) {
+            dado.classList.remove(`dado-${i}`);
+        }
+        dado.classList.add(`dado-${random}`);
+    });
 });
