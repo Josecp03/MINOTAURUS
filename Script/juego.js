@@ -78,13 +78,13 @@ window.addEventListener("DOMContentLoaded", function() {
     dado.addEventListener("click", function() {
         turno++;
         turnoJugador(turno);
+        let random=(Math.round(1+Math.random()*5));
 
-        let random=(Math.round(1+Math.random()*6));
-        console.log(random);
-
-        for (let i=0; i<6; i++) {
+        for (let i=1; i<=6; i++) {
             dado.classList.remove(`dado-${i}`);
         }
+        void dado.offsetWidth;
+
         dado.classList.add(`dado-${random}`);
     });
 });
