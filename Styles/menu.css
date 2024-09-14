@@ -3,6 +3,10 @@
     font-family: 'Lego';
     src: url(../Fonts/RoladeItalic-Black.ttf);
 }
+@font-face {
+    font-family: 'Vogue';
+    src: url(../Fonts/Vogue.ttf);
+}
 :root {
     --boton-naranja-claro: #F2B705;
     --boton-naranja-medio: #b37400;
@@ -181,6 +185,7 @@
     max-width: 750px;
     height: 0%;
     background-color:#ede6d6;
+    color: #1d1d1d;
     z-index: 1000;
     transition: 0.4s ease;
     font-family: "MedievalSharp";
@@ -208,7 +213,7 @@
 
 /* Div X */
 .div-instrucciones > div:first-child {
-    padding: 10px 0px;
+    padding: 13px 0px;
     display: flex;
     justify-content: right;
 }
@@ -229,16 +234,20 @@
     margin-bottom: 8px;
     text-align: center;
     font-size: 1.8em;
+    text-transform: uppercase;
+    font-family: 'Vogue';
 }
 
 /* Imágenes de las intrucciones */
 .imagenes-detalladas {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
 }
 .imagenes-detalladas img {
     width: 100px;
 }
 .imagenes-detalladas div {
     text-align: center;
+    padding: 0px 1%;
 }
