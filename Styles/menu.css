@@ -193,6 +193,7 @@
     overflow-y: scroll;
     visibility: hidden;
     text-align: justify;
+    font-variant: small-caps;
 }
 .div-instrucciones::-webkit-scrollbar {
     width: 10px;
@@ -250,4 +251,29 @@
 .imagenes-detalladas div {
     text-align: center;
     padding: 0px 1%;
+}
+
+/* Intrucciones dado */
+.instruccion-dado {
+    margin-bottom: 30px;
+}
+.instruccion-dado ul {
+    list-style: '- ';
+    padding-left: 25px;
+}
+.instruccion-dado ul li {
+    padding-top: 10px;
+}
+.instruccion-dado ul li span {
+    font-weight: bold;
+}
+
+/* Instrucciones muro */
+.div-instrucciones-muro {
+    margin-bottom: 30px;
+}
+
+/* Instrucciones Minotauro */
+.div-instrucciones-minotauro {
+    margin-bottom: 45px;
 }
